@@ -1,2 +1,2 @@
 # Django-reddit-site
-Trying to recreate reddit using django as m first project
+Trying to recreate reddit using django as my first project
