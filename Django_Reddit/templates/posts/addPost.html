@@ -1,0 +1,12 @@
+<h1>Please fill the details of the post below</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/posts/addPost/" method="post">
+    {% csrf_token %}
+    {{ form.post_header }}
+    <br><br>
+    {{ form.post_body }}
+    <br>
+    <input type="submit" value="Submit" />
+</form>

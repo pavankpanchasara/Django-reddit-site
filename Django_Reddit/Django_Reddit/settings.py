@@ -53,10 +53,18 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'Django_Reddit.urls'
 
+TEMPLATE_POSTS = os.path.join(BASE_DIR, 'templates/posts/')
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR,  'templates'),
+    TEMPLATE_POSTS,
+)
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': TEMPLATE_DIRS,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

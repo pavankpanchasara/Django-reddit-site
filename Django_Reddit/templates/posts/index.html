@@ -1,0 +1,9 @@
+{% if latest_posts_list %}
+    <ul>
+    {% for posts in latest_posts_list %}
+        <li>{{ posts.post_header }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
